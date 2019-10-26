@@ -7,7 +7,7 @@ import Menu from '../Menu';
 const Layout = ({children}) => (
     <div className="layout">
         <Sidebar
-            className="sidebar--dark u-padding-left-big"
+            className="sidebar--dark"
         >
             <Menu />
         </Sidebar>
@@ -15,7 +15,7 @@ const Layout = ({children}) => (
             {children}
         </Content>
         <Sidebar
-            className="sidebar--bordered u-padding-left-big u-padding-right-big"
+            className="sidebar--bordered"
         >
             Here Goes Other Sidebar
         </Sidebar>

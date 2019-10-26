@@ -1,0 +1,45 @@
+.trip-card {
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 1rem;
+  background-color: $gray-light;
+
+  &__flag {
+    width: 4rem;
+    margin-right: 2rem;
+  }
+
+  &__content {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-right: auto;
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 1.6rem;
+    text-transform: capitalize;
+  }
+
+  &__address {
+    font-size: 1.4rem;
+    color: black;
+  }
+
+  &__buttons {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+
+    & > * {
+      margin-left: 1rem;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+.country-chip {
+  // I need to override Material UI styles, impossible with className only
+  background-color: $gray-light !important;
+
+  &__flag {
+    width: 2.4rem !important;
+  }
+
+  .MuiChip-label {
+    text-transform: capitalize;
+    font-family: $font-family--primary !important;
+    font-size: 1.4rem !important;
+    color: $gray-dark;
+  }
+}
