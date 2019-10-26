@@ -1,0 +1,34 @@
+.u-margin-right-small {
+  margin-right: 1rem;
+}
+
+.u-padding {
+  &-right {
+    &-big {
+      padding-right: 4rem;
+    }
+
+    &-medium {
+      padding-right: 2rem;
+    }
+
+    &-small {
+      padding-right: 1rem;
+    }
+  }
+
+  &-left {
+    &-big {
+      padding-left: 4rem;
+    }
+
+    &-medium {
+      padding-left: 2rem;
+    }
+
+    &-small {
+      padding-left: 1rem;
+    }
+  }
+}
+

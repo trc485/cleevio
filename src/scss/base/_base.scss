@@ -1,0 +1,11 @@
+html {
+  // here I define the root font-size o work with rem units
+  // if browser default font-size is 16px, this will make 1rem = 10px;
+  // this defines what 1rem is, not related only to typography
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  font-size: 1.6rem;
+}

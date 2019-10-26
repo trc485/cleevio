@@ -1,0 +1,14 @@
+.sidebar {
+  width: 24rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  flex-grow: 0;
+
+  &--dark {
+    background-color: $gray-light;
+  }
+
+  &--bordered {
+    border-left: 1px solid $gray-separator;
+  }
+}
