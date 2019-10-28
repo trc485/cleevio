@@ -1,37 +1,28 @@
 import React from 'react';
-import { Button, Icon, Badge } from 'antd';
-import homeIcon from '../../assets/icons/home.svg';
-import starIcon from '../../assets/icons/star.svg';
-import scheduledIcon from '../../assets/icons/scheduled.svg';
-import draftsIcon from '../../assets/icons/drafts.svg';
-import historyIcon from '../../assets/icons/history.svg';
+import { Button, Icon as AntdIcon, Badge } from 'antd';
+import Icon from '../Icon';
 
 const appSections = [
     {
         title: 'home',
-        icon: homeIcon,
-        iconAlt: 'home icon',
+        IconType: 'home',
     },
     {
         title: 'favorites',
-        icon: starIcon,
-        iconAlt: 'star icon',
+        IconType: 'star',
     },
     {
         title: 'planned',
-        icon: scheduledIcon,
-        iconAlt: 'clock icon',
+        IconType: 'scheduled',
     },
     {
         title: 'drafts',
-        icon: draftsIcon,
-        iconAlt: 'drafts icon',
+        IconType: 'drafts',
         badge: 1,
     },
     {
         title: 'history',
-        icon: historyIcon,
-        iconAlt: 'history icon',
+        IconType: 'history',
     }
 ];
 
@@ -45,16 +36,16 @@ const Menu = () => (
             }}
         >
             New Trip
-            <Icon type="plus" />
+            <AntdIcon type="plus" />
         </Button>
         {
             appSections.map(section => (
                 <div
                     className="menu__link-row"
+                    key={`menu-section__${section.title}`}
                 >
-                    <img
-                        src={section.icon}
-                        alt={section.alt}
+                    <Icon
+                        type={section.IconType}
                     />
                     <h4
                         className="menu__link-title"

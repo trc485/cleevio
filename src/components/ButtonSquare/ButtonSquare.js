@@ -1,21 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Icon from '../Icon';
 
-const ButtonSquare = ({type, icon, onClick}) => (
+const ButtonSquare = ({type, iconType, onClick}) => (
     <span onClick={onClick}
           className={type ? `button-square button-square--${type}` : 'button-square'}
     >
-        <img
+        <Icon
             className="button-square__icon"
-            src={icon}
-            alt={`${icon} icon`}
+            type={iconType}
         />
     </span>
 );
 
 ButtonSquare.propTypes = {
     type: PropTypes.string,
-    icon: PropTypes.string,
+    IconType: PropTypes.string,
     onClick: PropTypes.func,
 };
 
