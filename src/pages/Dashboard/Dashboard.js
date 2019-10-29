@@ -1,72 +1,111 @@
-import React, { useState, useEffect } from 'react';
-import { Select, Input } from 'antd';
-import { ButtonSquare, CountryChipsRow, TripCard, Icon } from '../../components';
-import axios from 'axios';
-
-const {Option} = Select;
-const {Search} = Input;
+import React from 'react';
+import {
+    ButtonSquare,
+    TripCard,
+    PageHeader,
+    StartNewTrip,
+    SectionHeader,
+    SectionContent,
+} from '../../components';
 
 const Dashboard = () => {
 
-    const [countries, setCountries] = useState([]);
-    const [isLoadingCountries, setIsLoadingCountries] = useState(false);
-    const [countriesError, setCountriesError] = useState(null);
-
-    console.log(countries);
-
-    useEffect(() => {
-        setIsLoadingCountries(true);
-        axios.get('https://gist.githubusercontent.com/davidzadrazil/43378abbaa2f1145ef50000eccf81a85/raw/d734d8877c2aa9e1e8c1c59bcb7ec98d7f8d8459/countries.json')
-            .then(response => {
-                setCountries(response.data[0].data);
-                setIsLoadingCountries(false);
-            })
-            .catch(error => {
-                setCountriesError(error);
-                setIsLoadingCountries(false);
-            });
-    }, []);
-
     return (
-        <div>
-            <h2>
-                Home
-            </h2>
-            <Select defaultValue="user" style={{width: 150}}>
-                <Option value="user">Filip Bednarik</Option>
-            </Select>
-            <h1>
-                Start New Trip
-            </h1>
-            <Icon type="aircraft" />
-            <div>
-                <Search
-                    placeholder="Where do you want to travel?"
-                    style={{width: 300}}
+        <React.Fragment>
+            <PageHeader
+                title="home"
+            />
+            <StartNewTrip />
+            <SectionHeader
+                title="drafts"
+            />
+            <SectionContent>
+                <TripCard
+                    countryValue="germany"
+                    countryText="Germany"
+                    countryIcon="flag-germany"
+                    address="165, L547, 37586, Dassel, Northeim, Niedersachsen"
+                    buttons={[
+                        <ButtonSquare
+                            type="danger"
+                            iconType="bin"
+                            key="button-1"
+                        />,
+                        <ButtonSquare
+                            iconType="arrow-right"
+                            key="button-2"
+                        />,
+                    ]}
                 />
-            </div>
-            <CountryChipsRow
-                countries={countries}
-                isLoading={isLoadingCountries}
-                error={countriesError}
+            </SectionContent>
+            <SectionHeader
+                title="favorites"
             />
-            <TripCard
-                countryValue="germany"
-                countryText="Germany"
-                countryIcon={'flag-germany'}
-                address="165, L547, 37586, Dassel, Northeim, Niedersachsen"
-                buttons={[
-                    <ButtonSquare
-                        iconType="home"
-                        key="button-1"
-                    />,
-                    <ButtonSquare
-                        iconType="home"
-                        key="button-2"
-                    />,
-                ]}
+            <SectionContent>
+                <TripCard
+                    countryValue="czechia"
+                    countryText="Czechia"
+                    countryIcon="flag-czechia"
+                    address="Na Ležánkách, 530 03, Pardubice, Pardubický kraj"
+                    buttons={[
+                        <ButtonSquare
+                            type="favorite"
+                            iconType="star"
+                            key="button-1"
+                        />,
+                        <ButtonSquare
+                            iconType="reload"
+                            key="button-2"
+                        />,
+                    ]}
+                />
+            </SectionContent>
+            <SectionHeader
+                title="recent"
             />
-        </div>
+            <SectionContent>
+                <TripCard
+                    countryValue="portugal"
+                    countryText="Portugal"
+                    countryIcon="flag-portugal"
+                    address="Unnamed Road, 5000, Vila Real"
+                    buttons={[
+                        <ButtonSquare
+                            iconType="star"
+                            key="button-1"
+                        />,
+                        <ButtonSquare
+                            iconType="reload"
+                            key="button-2"
+                        />,
+                        <ButtonSquare
+                            iconType="arrow-right"
+                            key="button-3"
+                        />,
+                    ]}
+                />
+                <TripCard
+                    countryValue="france"
+                    countryText="France"
+                    countryIcon="flag-france"
+                    address="Rue aux Moines, 70120, Lavigney, Haute-Saône, Bourgogne-Franche..."
+                    buttons={[
+                        <ButtonSquare
+                            iconType="star"
+                            key="button-1"
+                        />,
+                        <ButtonSquare
+                            iconType="reload"
+                            key="button-2"
+                        />,
+                        <ButtonSquare
+                            iconType="arrow-right"
+                            key="button-3"
+                        />,
+                    ]}
+                />
+            </SectionContent>
+        </React.Fragment>
     );
 };
 

@@ -1,0 +1,14 @@
+.section-header {
+  display: flex;
+  width: 100%;
+  padding: 2rem 0;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+
+  &__title {
+    font-size: 1.4rem;
+    color: $gray-dark;
+    text-transform: capitalize;
+  }
+}

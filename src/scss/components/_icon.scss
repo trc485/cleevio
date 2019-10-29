@@ -1,0 +1,12 @@
+.icon {
+  max-height: 1.6rem;
+  max-width: 1.6rem;
+
+  &--danger {
+    fill: $red;
+  }
+
+  &--favorite {
+    fill: $yellow;
+  }
+}

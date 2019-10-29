@@ -3,12 +3,14 @@ import PropTypes from 'prop-types';
 import flagCzechia from './icons/czechia.svg';
 import flagGermany from './icons/germany.svg';
 import flagFrance from './icons/france.svg';
+import flagPortugal from './icons/portugal.svg';
 import flagSlovakia from './icons/slovakia.svg';
 
 const countryIconsMap = {
     'flag-czechia': flagCzechia,
     'flag-germany': flagGermany,
     'flag-france': flagFrance,
+    'flag-portugal': flagPortugal,
     'flag-slovakia': flagSlovakia,
 };
 

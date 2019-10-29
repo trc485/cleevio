@@ -1,0 +1,36 @@
+.menu {
+  height: 100%;
+  width: 100%;
+  padding-top: 4rem;
+
+  &__button-container {
+    padding: 0 4rem;
+    margin-bottom: 4rem;
+  }
+
+  &__navigation {
+    padding-left: 4rem;
+    padding-right: 2rem;
+
+    & > *:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__link-row {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  &__link-title {
+    margin-left: 1rem;
+    color: $gray-dark;
+    flex-grow: 1;
+
+    &:first-letter {
+      text-transform: uppercase;
+    }
+  }
+}

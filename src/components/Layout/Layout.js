@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Sidebar from '../Sidebar';
 import Content from '../Content';
 import Menu from '../Menu';
+import { ReactComponent as TripsPlaceholder } from '../../assets/svg/trips.svg';
 
 const Layout = ({children}) => (
     <div className="layout">
@@ -15,9 +16,9 @@ const Layout = ({children}) => (
             {children}
         </Content>
         <Sidebar
-            className="sidebar--bordered"
+            className="sidebar--wider"
         >
-            Here Goes Other Sidebar
+            <TripsPlaceholder />
         </Sidebar>
     </div>
 );

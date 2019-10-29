@@ -2,6 +2,15 @@
   margin-right: 1rem;
 }
 
+.u-separator {
+  &-left {
+    border-left: 1px solid $gray-separator;
+  }
+  &-bottom {
+    border-bottom: 1px solid $gray-separator;
+  }
+}
+
 .u-padding {
   &-right {
     &-big {

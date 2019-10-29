@@ -1,30 +1,53 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
-import { ReactComponent as AircraftIcon } from './icons/aircraft.svg';
+import { ReactComponent as ArrowRightIcon } from './icons/arrow-right.svg';
+import { ReactComponent as BinIcon } from './icons/bin.svg';
 import { ReactComponent as DraftsIcon } from './icons/drafts.svg';
 import { ReactComponent as HistoryIcon } from './icons/history.svg';
 import { ReactComponent as HomeIcon } from './icons/home.svg';
+import { ReactComponent as ReloadIcon } from './icons/reload.svg';
 import { ReactComponent as ScheduledIcon } from './icons/scheduled.svg';
 import { ReactComponent as StarIcon } from './icons/star.svg';
 
 const iconsMap = {
-    aircraft: AircraftIcon,
+    'arrow-right': ArrowRightIcon,
+    bin: BinIcon,
     drafts: DraftsIcon,
     history: HistoryIcon,
     home: HomeIcon,
+    reload: ReloadIcon,
     scheduled: ScheduledIcon,
     star: StarIcon
 };
 
-const Icon = ({type, ...rest}) => {
+const Icon = ({type, className, ...rest}) => {
     const IconComponent = iconsMap[type];
-    return <IconComponent {...rest} />;
+    const iconClass = classNames({
+        icon: true,
+        [className]: className
+    });
+    return (
+        <IconComponent
+            className={iconClass}
+            {...rest}
+        />);
 };
 
 Icon.propTypes = {
-    type: PropTypes.string,
+    className: PropTypes.string,
     rest: PropTypes.object,
+    type: PropTypes.oneOf([
+        'arrow-right',
+        'bin',
+        'drafts',
+        'history',
+        'home',
+        'reload',
+        'scheduled',
+        'star',
+    ]).isRequired,
 };
 
 export default Icon;
