@@ -9,6 +9,7 @@ import { ReactComponent as HistoryIcon } from './icons/history.svg';
 import { ReactComponent as HomeIcon } from './icons/home.svg';
 import { ReactComponent as ReloadIcon } from './icons/reload.svg';
 import { ReactComponent as ScheduledIcon } from './icons/scheduled.svg';
+import { ReactComponent as SearchIcon } from './icons/search.svg';
 import { ReactComponent as StarIcon } from './icons/star.svg';
 
 const iconsMap = {
@@ -19,6 +20,7 @@ const iconsMap = {
     home: HomeIcon,
     reload: ReloadIcon,
     scheduled: ScheduledIcon,
+    search: SearchIcon,
     star: StarIcon
 };
 
@@ -46,6 +48,7 @@ Icon.propTypes = {
         'home',
         'reload',
         'scheduled',
+        'search',
         'star',
     ]).isRequired,
 };

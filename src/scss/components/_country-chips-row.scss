@@ -4,6 +4,8 @@
   flex-flow: row wrap;
   justify-content: flex-start;
   align-items: center;
+  color: $gray-dark;
+  font-size: 1.2rem;
 
   & > * {
     margin-right: 1rem;

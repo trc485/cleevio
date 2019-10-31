@@ -10,9 +10,12 @@
     "downshift": "^3.4.0",
     "node-sass": "^4.13.0",
     "prop-types": "^15.7.2",
+    "ramda": "^0.26.1",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
-    "react-scripts": "3.2.0"
+    "react-highlight-words": "^0.16.0",
+    "react-scripts": "3.2.0",
+    "string.prototype.startswith": "^0.2.0"
   },
   "scripts": {
     "start": "react-scripts start",

@@ -1,5 +1,12 @@
 .search-destination {
   width: 38rem;
+  position: relative;
+
+  &__icon-search {
+    position: absolute;
+    top: 1.4rem;
+    right: 2rem;
+  }
 
   &__input-search {
     width: 100%;
@@ -72,5 +79,18 @@
   &__list-item-text {
     font-size: 1.2rem;
     color: black;
+
+    mark {
+      background-color: transparent;
+      font-style: normal;
+    }
+
+    &--highlighted {
+      font-weight: bold !important;
+    }
+
+    &--remove-default-highlight {
+      font-weight: 400;
+    }
   }
 }
